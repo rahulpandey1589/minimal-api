@@ -1,3 +1,4 @@
+using minimal_api.Endpoints.Users;
 using minimal_api.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,6 +26,8 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.MapControllers();
+app.AddUserEndpoint();
+
+//app.MapControllers();
 
 app.Run();
