@@ -1,4 +1,4 @@
-using minimal_api.Endpoints.Users;
+using Carter;
 using minimal_api.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,8 +10,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.AddDepedencies();
-
 builder.Services.AddMemoryCache();
+
+builder.Services.AddCarter();
 
 var app = builder.Build();
 
@@ -26,8 +27,6 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.AddUserEndpoint();
-
-//app.MapControllers();
+app.MapCarter();
 
 app.Run();

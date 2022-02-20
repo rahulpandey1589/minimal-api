@@ -12,14 +12,14 @@ public static class AddService
     {
         RegisterServices(builder);
 
-        builder.Services.Configure<PageModel>(builder.Configuration.GetSection("PageModel"));
+        builder.Services.Configure<PageModel>(
+            builder.Configuration.GetSection("PageModel"));
 
         builder.Services.AddHttpClient("ResAPI", client =>
         {
             client.BaseAddress = new Uri(
                 builder.Configuration.GetSection("Configuration:BaseUrl").Value);
         });
-
         return builder;
     }
 
