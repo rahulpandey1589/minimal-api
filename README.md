@@ -19,3 +19,7 @@ Minimal API
 
 This project implements a simple Minimal API which includes OpenAPI(Swagger) documentation and UI.
 
+* Call an external API automatically and save the response in `IMemoryCache` utilty provided by framework.
+* User endpoint is exposed which fetch all the data. It first check in cache, if not available, it again makes a call to external endpoint.
+* With the help of `ICarterModule` Nuget package, all the endpoints are removed from `Program.cs` and is moved to specific folder. 
+* `IHttpClientFactory` is used to define root endpoints and other important details used to call an external API.
