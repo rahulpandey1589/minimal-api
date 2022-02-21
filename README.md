@@ -24,6 +24,8 @@ This project implements a simple Minimal API which includes OpenAPI(Swagger) doc
 * With the help of `ICarterModule` Nuget package, all the endpoints are removed from `Program.cs` and is moved to specific folder. Add following lines in `Program.cs` to register Carter Module
 ``` 
      builder.Services.AddCarter();
+         // other depedencies to register
+     
      app.MapCarter();
 ```
 * `IHttpClientFactory` is used to define root endpoints and other important details used to call an external API.
