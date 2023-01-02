@@ -8,7 +8,9 @@
 
   <ItemGroup>
     <PackageReference Include="Carter" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.1" />
   </ItemGroup>
 
 </Project>

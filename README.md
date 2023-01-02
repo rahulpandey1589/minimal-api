@@ -5,12 +5,14 @@ This is a playground to test Minimal feature provided in .Net 6.
 ## Depedencies
 The code available in this repository depends on following items
 
-| Package                	| Version 	|
-|------------------------	|---------	|
-| .Net                   	| 6       	|
-| Carter                 	| 6.0.0   	|
-| Swashbuckle.AspnetCore 	| 6.2.3   	|
-| Polly.Extensions.Http  	| 3.0.0     |
+| Package                	 | Version 	 |
+|-------------------------|-----------|
+| .Net                   	 | 6       	 |
+| Carter                 	 | 6.0.0   	 |
+| Swashbuckle.AspnetCore 	 | 6.2.3   	 |
+| Polly.Extensions.Http  	 | 3.0.0     |
+| Entity Framework  	     | 7.0.0     |
+
 
 
 ## Projects
