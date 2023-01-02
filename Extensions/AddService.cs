@@ -1,6 +1,6 @@
-﻿using minimal_api.Contracts;
-using minimal_api.Jobs;
+﻿using minimal_api.Jobs;
 using minimal_api.Models;
+using minimal_api.Contracts;
 using minimal_api.Implementation;
 
 namespace minimal_api.Extensions;
@@ -26,7 +26,7 @@ public static class AddService
     public static WebApplicationBuilder RegisterServices(
         WebApplicationBuilder builder)
     {
-        builder.Services.AddHostedService<BackgroundJobs>();
+       // builder.Services.AddHostedService<BackgroundJobs>();
 
         builder.Services.AddTransient<IUserService, UserService>();
 
