@@ -1,4 +1,5 @@
-﻿using Carter;
+﻿using AutoMapper;
+using Carter;
 using minimal_api.Contracts;
 using minimal_api.Models;
 using Microsoft.Extensions.Caching.Memory;
@@ -9,13 +10,16 @@ public class Implementation : ICarterModule
 {
     private readonly IMemoryCache _memoryCache;
     private readonly IUserService _userService;
+    private readonly IMapper _mapper;
 
     public Implementation(
         IMemoryCache memoryCache,
-        IUserService userService)
+        IUserService userService,
+        IMapper mapper)
     {
         _memoryCache = memoryCache;
         _userService = userService;
+        this._mapper = mapper;
     }
 
     public void AddRoutes(

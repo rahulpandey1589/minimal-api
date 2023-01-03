@@ -1,4 +1,5 @@
-﻿using minimal_api.Jobs;
+﻿using System.Reflection;
+using minimal_api.Jobs;
 using minimal_api.Models;
 using minimal_api.Contracts;
 using minimal_api.Implementation;
@@ -27,7 +28,7 @@ public static class AddService
         WebApplicationBuilder builder)
     {
        // builder.Services.AddHostedService<BackgroundJobs>();
-
+       builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
         builder.Services.AddTransient<IUserService, UserService>();
 
         return builder;
