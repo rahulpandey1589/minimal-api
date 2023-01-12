@@ -2,6 +2,7 @@
 
 services:
     minimal-api:
+        container_name: minimal_api
         build:
           context: .
           dockerfile: Dockerfile
@@ -12,6 +13,7 @@ services:
 
     minimaldb:
         image: "mcr.microsoft.com/mssql/server:2022-latest"
+        container_name: minimal_database
         ports:
           - "1433:1433"
 
